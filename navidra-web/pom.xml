@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.apache.cassandra.navidra</groupId>
+    <artifactId>navidra</artifactId>
+    <version>1.0</version>
+  </parent>
+  <groupId>org.apache.cassandra.navidra.web</groupId>
+  <artifactId>navidra-web</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+  <name>navidra-web Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <build>
+    <finalName>navidra</finalName>
+  </build>
+</project>
