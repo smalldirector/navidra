@@ -3,6 +3,8 @@ package org.apache.cassandra.navidra.core.ddl;
 import java.util.List;
 import java.util.Map;
 
+import com.google.common.collect.Maps;
+
 /**
  * The data definition for keyspace
  * 
@@ -16,6 +18,10 @@ public class Keyspace {
 	private Map<String, String> strategyOptions;
 	private boolean isDurableWrites;
 	private List<ColumnFamily> columnFamilies;
+	
+	public Keyspace() {
+		strategyOptions = Maps.newTreeMap();
+	}
 
 	public String getName() {
 		return name;
@@ -33,12 +39,12 @@ public class Keyspace {
 		this.stragegyClass = stragegyClass;
 	}
 
-	public Map<String, String> getStrategyOptions() {
-		return strategyOptions;
+	public String getStrategyOption(String key) {
+		return strategyOptions.get(key);
 	}
 
-	public void setStrategyOptions(Map<String, String> strategyOptions) {
-		this.strategyOptions = strategyOptions;
+	public void setStrategyOptions(String key, String value) {
+		strategyOptions.put(key, value);
 	}
 
 	public boolean isDurableWrites() {
